@@ -5,56 +5,7 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
-
-const CustomCircularProgress = ({
-  value,
-  size = "w-78 h-78",
-}: {
-  value: number;
-  size?: string;
-}) => {
-  const radius = 45;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (value / 100) * circumference;
-
-  return (
-    <div className={`relative ${size}`}>
-      <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-        <circle
-          cx="50%"
-          cy="50%"
-          r={radius}
-          stroke="#EEEEEE"
-          strokeWidth="1"
-          fill="transparent"
-        />
-        <circle
-          cx="50%"
-          cy="50%"
-          r={radius}
-          stroke="#111111"
-          strokeWidth="1"
-          fill="transparent"
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          style={{ transition: "stroke-dashoffset 0.5s ease-out" }}
-        />
-      </svg>
-
-      <div
-        className="absolute top-1/2 left-1/2"
-        style={{
-          transform: "translate(-50%, -50%)",
-          color: "#111111",
-          fontSize: "48px",
-        }}
-      >
-        {value}%
-      </div>
-    </div>
-  );
-};
+import { CircularProgress } from "@/components/ui/circular-progress";
 
 export function Skills() {
   const { ref, inView } = useInView({
@@ -105,25 +56,25 @@ export function Skills() {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row justify-between items-center gap-y-12">
           <div className="w-37.5 lg:w-68.75 flex flex-col justify-center items-center gap-y-6">
-            <CustomCircularProgress value={fullBody} />
+            <CircularProgress value={fullBody} />
             <div className="uppercase font-light tracking-[1.2px] text-center">
               Full Body Tattoo
             </div>
           </div>
           <div className="w-37.5 lg:w-68.75 flex flex-col justify-center items-center gap-y-6">
-            <CustomCircularProgress value={piercing} />
+            <CircularProgress value={piercing} />
             <div className="uppercase font-light tracking-[1.2px] text-center">
               Safely Piercing
             </div>
           </div>
           <div className="w-37.5 lg:w-68.75 flex flex-col justify-center items-center gap-y-6">
-            <CustomCircularProgress value={fullColor} />
+            <CircularProgress value={fullColor} />
             <div className="uppercase font-light tracking-[1.2px] text-center">
               Full Colour Tattoo
             </div>
           </div>
           <div className="w-37.5 lg:w-68.75 flex flex-col justify-center items-center gap-y-6">
-            <CustomCircularProgress value={temporary} />
+            <CircularProgress value={temporary} />
             <div className="uppercase font-light tracking-[1.2px] text-center">
               Temporary Tattoo
             </div>
