@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Oswald, Raleway, Rozha_One } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const oswald = Oswald({
+  variable: "--font-oswald",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const raleway = Raleway({
+  variable: "--font-raleway",
+  display: "swap",
+});
+
+const rozhaOne = Rozha_One({
+  variable: "--font-rozha-one",
+  display: "swap",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${oswald.variable} ${raleway.variable} ${rozhaOne.variable}`}
+      >
         {children}
       </body>
     </html>

@@ -1,1 +1,94 @@
 @import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-primary: var(--font-oswald);
+  --font-secondary: var(--font-raleway);
+  --font-tertiary: var(--font-rozha-one);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1300px;
+
+  --color-dark: #111111;
+  --color-grey: #555555;
+
+  --background-image-hero: url("../assets/img/hero/bg.jpg");
+  --background-image-about: url("../assets/img/about/image.png");
+  --background-image-interview: url("../assets/img/interview/bg.png");
+
+  --container-padding: 20px;
+  --container-padding-lg: 0;
+}
+
+@layer base {
+  body {
+    @apply font-secondary text-lg text-dark  bg-[#E5E5E5];
+  }
+  .section {
+    @apply py-10 lg:py-40;
+  }
+  .link {
+    @apply uppercase font-primary tracking-[0.08em];
+  }
+  .h1 {
+    @apply text-6xl lg:text-[118px] tracking-[-2px] leading-none font-tertiary mb-4;
+  }
+  .h2 {
+    @apply text-[40px] xl:text-[85px] text-dark uppercase font-primary max-w-59 leading-none mb-9.5;
+  }
+  /* buttons */
+  .btn {
+    @apply font-primary text-lg tracking-[0.08em] uppercase px-10 transition-all duration-300 flex items-center gap-x-[10px];
+  }
+  .btn-sm {
+    @apply h-13.75;
+  }
+  .btn-lg {
+    @apply h-16.75;
+  }
+  .btn-outline {
+    @apply border border-white/70 bg-none hover:bg-white hover:text-dark;
+  }
+  .btn-dark {
+    @apply bg-dark hover:bg-dark/90 transition-all text-white;
+  }
+  .btn-link {
+    @apply px-0 h-auto text-dark hover:text-dark/90 transition-all;
+  }
+
+  * {
+    scrollbar-color: unset !important;
+  }
+  ::-webkit-scrollbar {
+    width: 0.3rem;
+    height: 0.3rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 0.25rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #dbdbdb;
+    outline: none;
+    border-radius: 0.25rem;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background-color: #aeaeae;
+    border-radius: 1rem;
+  }
+  html::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+}
