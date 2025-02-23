@@ -1,6 +1,7 @@
 import { navData } from "@/constants";
 
 import { Socials } from "./socials";
+import Link from "next/link";
 
 export function NavMobile({ onClick }: { onClick: () => void }) {
   const { items } = navData;
@@ -9,7 +10,7 @@ export function NavMobile({ onClick }: { onClick: () => void }) {
       <ul className="flex flex-col justify-center items-center gap-y-6 py-6 mb-8">
         {items.map((item, index) => (
           <li key={index}>
-            <a
+            <Link
               className="text-2xl font-primary uppercase"
               href={item.href}
               onClick={(e) => {
@@ -33,7 +34,7 @@ export function NavMobile({ onClick }: { onClick: () => void }) {
               }}
             >
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
