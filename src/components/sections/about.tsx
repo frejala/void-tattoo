@@ -8,7 +8,7 @@ export function About() {
   const { title, subtitle1, subtitle2, btnText, btnIcon } = aboutData;
 
   return (
-    <section className="lg:py-16 xl:pb-40" id="about">
+    <section className="lg:py-16 xl:pb-40 px-10" id="about">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-17.5 items-center">
           {/* Numbers */}

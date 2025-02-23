@@ -9,7 +9,7 @@ export function Contact() {
   const { title, info, form } = contactData;
 
   return (
-    <section className="section" id="contact">
+    <section className="section px-10" id="contact">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-y-16">
           <motion.div

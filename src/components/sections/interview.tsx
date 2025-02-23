@@ -16,7 +16,7 @@ export function Interview() {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.1 }}
-      className="section bg-dark bg-interview bg-no-repeat bg-cover bg-center lg:h-203"
+      className="section bg-dark bg-interview bg-no-repeat bg-cover bg-center lg:h-203 px-10"
       id="interview"
     >
       <div className="container mx-auto h-full">
@@ -28,8 +28,11 @@ export function Interview() {
             >
               {title}
             </motion.h3>
-            <motion.div variants={fadeIn("down")}>
-              <ReactPlayer url="https://www.youtube.com/watch?v=_l1mqYQuNf8" />
+            <motion.div variants={fadeIn("down")} className="w-full">
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=_l1mqYQuNf8"
+                width={"100%"}
+              />
             </motion.div>
           </div>
         </div>

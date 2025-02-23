@@ -19,7 +19,7 @@ export function Footer() {
   const { about, links, program, newsletter } = footerData;
 
   return (
-    <footer className="bg-dark selection py-10">
+    <footer className="bg-dark selection py-10 px-10">
       <div className="container mx-auto">
         <motion.div
           variants={staggerContainer}

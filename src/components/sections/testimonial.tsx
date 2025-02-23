@@ -18,7 +18,7 @@ export function Testimonial() {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
-      className="pb-[40px] pt-[40px] lg:pb-[160px] lg:pt-0"
+      className="pb-10 pt-10 lg:pb-40 lg:pt-0 px-10"
       id="testimonial"
     >
       <div className="container mx-auto">

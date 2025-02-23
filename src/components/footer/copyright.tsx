@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Copyright() {
   return (
-    <div className="bg-dark text-[#dbdbdb] py-6 border-t border-[#2b2b2b]">
+    <div className="bg-dark text-[#dbdbdb] py-6 border-t border-[#2b2b2b] px-10">
       <motion.div
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
