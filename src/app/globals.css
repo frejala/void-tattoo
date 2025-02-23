@@ -91,4 +91,10 @@
   body::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.09);
   }
+
+  /* globals.css or your CSS file */
+  svg.react-aria-CircularProgress {
+    width: 120px;
+    height: 120px;
+  }
 }
