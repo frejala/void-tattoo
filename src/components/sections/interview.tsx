@@ -1,9 +1,11 @@
 "use client";
 
 import { interviewData } from "@/constants";
-import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
+
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export function Interview() {
   const { title } = interviewData;

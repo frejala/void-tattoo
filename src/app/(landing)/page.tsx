@@ -1,4 +1,5 @@
 import { About } from "@/components/sections/about";
+import { Contact } from "@/components/sections/contact";
 import { Gallery } from "@/components/sections/gallery";
 import { Hero } from "@/components/sections/hero";
 import { Interview } from "@/components/sections/interview";
@@ -14,6 +15,7 @@ export default function LandingPage() {
       <Skills />
       <Testimonial />
       <Interview />
+      <Contact />
     </>
   );
 }
