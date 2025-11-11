@@ -12,9 +12,6 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
-    # Descomentar si necesitas variables de entorno
-    # env_file:
-    #   - .env.production
     healthcheck:
       test:
         [
